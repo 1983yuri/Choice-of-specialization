@@ -18,22 +18,30 @@
 
 string[] TransformStringArray(string[] array)
 {
-    
-    string[] newarray = new string[size];
+   int count = 0;
+   int i, j = 0; 
 
-    for( int i = 0, j = 0; i < newarray.Length; i++)
+   for(i = 0; i < array.Length; i++)
+   {
+    string str = array[i];
+    int length = str.Length;
+    if(length <= 3) count++;
+   }
+
+   string[] newArr = new string[count];
+   
+   for(i, j = 0; i < array.Length; i++)
+   {
+    string str = array[i];
+    int length = str.Length;
+    if(length <= 3)
     {
-        string str = newarray[i];
-        int length = str.Length; 
-        if(length <= 3)
-        {
-            newarray[j] = array[i];
-            j++;
-        }
-        else i++; 
+        newArr[j] = array[i];
+        j++;
     }
-    return array;
-    
+    else i++;
+   }
+    return newArr;
 }
 
 void ShowStringArr(string[] array)
@@ -52,6 +60,7 @@ void ShowStringArr(string[] array)
 
 string[] strArr = CreateStringArray();
 ShowStringArr(strArr);
+Console.WriteLine();
 string[] newStrArr = TransformStringArray(strArr);
 ShowStringArr(newStrArr);
 
