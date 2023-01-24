@@ -38,7 +38,7 @@ string[] TransformStringArray(string[] array)
         newArr[j] = array[i];
         j++;
     }
-    // else i++;
+    
    }
     return newArr;
 }
@@ -57,7 +57,7 @@ void ShowStringArr(string[] array)
     
 }
 
-Console.WriteLine("Input the count of string, you want to input: ");
+Console.WriteLine("Input the count of strings, you want to input: ");
 int size = Convert.ToInt32(Console.ReadLine());
 string[] strArr = CreateStringArray(size);
 Console.WriteLine("The inputed string array is:");
