@@ -1,2 +1,8 @@
-# This repository contains a program created in the C# programming language
-This is a program that from an existing array of strings forms a new array of strings whose length is less than or equal to 3 characters. The initial array can be entered from the keyboard, or set at the start of the algorithm execution. When solving, it is not recommended to use collections, it is better to use only arrays.
+# This repository contains a program created in the C# 
+### This is a program that from an existing array of strings forms a new array of strings whose length is less than or equal to 3 characters. The initial array can be entered from the keyboard, or set at the start of the algorithm execution. When solving, it is not recommended to use collections, it is better to use only arrays.
+
+*This program consists of 3 methods:*
+
+- **CreateStringArray** Method for creating and filling an array with string values
+- **TransformStringArray** Array conversion method
+- **ShowStringArr** Method for outputting an array to the console
