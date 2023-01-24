@@ -1,15 +1,14 @@
-﻿string[] CreateStringArray()
+﻿string[] CreateStringArray(int size)
 {
-    string[] newStringArr = new string[3];
+    string[] newStringArr = new string[size];
     int count = newStringArr.Length;
     int i = 0;
 
     do
     {
-        Console.WriteLine($"Input the {i + 1} of three string in turn: ");
-        newStringArr[i] = Console.ReadLine(); // Можно сразу проверять как на null так и не записывать в массив значения превышающие 3 знака Нужно реализовать! Хотя, просят новый массив!
-        i++; count--;                         // Надо подумать, как организовать проверку на количество символов. В одной из лекций было такое, где текст заменяли
-        
+        Console.WriteLine($"Input the {i + 1} of {size} string in turn: ");
+        newStringArr[i] = Console.ReadLine(); 
+        i++; count--;                         
     }
     while (count > 0);
 
@@ -21,7 +20,7 @@ string[] TransformStringArray(string[] array)
    int count = 0;
    int i, j = 0; 
 
-   for(i = 0; i < array.Length; i++)
+   for(i = 0; i < array.Length; i++) // Вычисляем размер нового массива
    {
     string str = array[i];
     int length = str.Length;
@@ -30,7 +29,7 @@ string[] TransformStringArray(string[] array)
 
    string[] newArr = new string[count];
    
-   for(i, j = 0; i < array.Length; i++)
+   for(i = 0; i < array.Length; i++) 
    {
     string str = array[i];
     int length = str.Length;
@@ -39,7 +38,7 @@ string[] TransformStringArray(string[] array)
         newArr[j] = array[i];
         j++;
     }
-    else i++;
+    // else i++;
    }
     return newArr;
 }
@@ -58,9 +57,13 @@ void ShowStringArr(string[] array)
     
 }
 
-string[] strArr = CreateStringArray();
+Console.WriteLine("Input the count of string, you want to input: ");
+int size = Convert.ToInt32(Console.ReadLine());
+string[] strArr = CreateStringArray(size);
+Console.WriteLine("The inputed string array is:");
 ShowStringArr(strArr);
 Console.WriteLine();
+Console.WriteLine("The new string array is: ");
 string[] newStrArr = TransformStringArray(strArr);
 ShowStringArr(newStrArr);
 
