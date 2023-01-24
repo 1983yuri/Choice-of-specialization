@@ -7,7 +7,9 @@
     do
     {
         Console.WriteLine($"Input the {i + 1} of {size} string in turn: ");
-        newStringArr[i] = Console.ReadLine(); 
+        string? tempstr = Console.ReadLine();
+        if(tempstr == null) tempstr = " ";
+        newStringArr[i] = tempstr; 
         i++; count--;                         
     }
     while (count > 0);
