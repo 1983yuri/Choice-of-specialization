@@ -8,7 +8,7 @@
     {
         Console.WriteLine($"Input the {i + 1} of {size} string in turn: ");
         string? tempstr = Console.ReadLine();                                        // Допускаем значение строки равному Null
-        if(tempstr == null) tempstr = string.Empty;                                  // Если значение строки равно Null присваеваем значение - пробел
+        if(tempstr == null) tempstr = string.Empty;                                  // Если значение строки равно Null присваеваем значение - пустая строка
         newStringArr[i] = tempstr; 
         i++; count--;                         
     }
